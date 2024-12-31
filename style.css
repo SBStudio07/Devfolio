@@ -54,6 +54,9 @@ nav {
   text-decoration: none;
   color: white;
 }
+.nav-right ul li a:focus-visible {
+  outline: none;
+}
 .nav-right ul li::after {
   content: "";
   position: absolute;
@@ -430,8 +433,6 @@ nav {
 }
 
 /* Pricing Section */
-
-/* Pricing Section */
 .pricing {
   width: 100%;
   background-color: #f9f9f9;
@@ -443,7 +444,7 @@ nav {
 }
 .pricing-heading p {
   color: #646464;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
 }
 .pricing-heading h1 {
@@ -451,8 +452,9 @@ nav {
   margin: 10px 0;
 }
 .pricing-heading .subtext {
-  font-size: 14px;
-  color: #888;
+  font-size: 16px;
+  color: #646464;
+  font-weight: 200;
 }
 
 .pricing-grid {
@@ -538,3 +540,165 @@ nav {
     rgba(0, 123, 255, 0.05)
   );
 }
+
+/* Blog Section */
+.blog-section {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.blog-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.blog-section .container h4{
+  font-size: 15px;
+  color: #646464;
+  text-align: center;
+}
+.blog-section .section-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-section .section-description {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #646464;
+  font-weight: 200;
+}
+
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-post {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.blog-post .post-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.blog-post .post-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.blog-post .post-excerpt {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.blog-post .post-full {
+  font-size: 16px;
+  color: #333;
+  display: none;
+  margin-bottom: 15px;
+}
+
+.blog-post .read-more,
+.blog-post .read-less {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+  display: none;
+}
+
+.blog-post .read-more:hover,
+.blog-post .read-less:hover {
+  text-decoration: underline;
+}
+
+/* Correct way to style the first, second, and third blog post */
+.blog-post:nth-child(1) .read-more {
+    display: inline-block;
+}
+.blog-post:nth-child(1) .read-less {
+    display: none;
+}
+
+.blog-post:nth-child(2) .read-more {
+    display: inline-block;
+}
+.blog-post:nth-child(2) .read-less {
+    display: none;
+}
+
+.blog-post:nth-child(3) .read-more {
+    display: inline-block;
+}
+.blog-post:nth-child(3) .read-less {
+    display: none;
+}
+
+/* Initially hide the Read Less button */
+.blog-post .read-less {
+  display: none;
+}
+
+/* Initially show the Read More button */
+.blog-post .read-more {
+  display: inline-block;
+}
+
+/* Style for the full content (hidden initially) */
+.blog-post .post-full {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add styling for headings and lists in the full content */
+.blog-post .post-full h4, .blog-post .post-full h5 {
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.blog-post .post-full ul, .blog-post .post-full ol {
+  margin-left: 20px;
+}
+
+.blog-post .post-full li {
+  margin-bottom: 8px;
+}
+
+/* Optional: Add some styling for the blog post */
+.blog-post {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.read-more, .read-less {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover, .read-less:hover {
+  text-decoration: underline;
+}
+
