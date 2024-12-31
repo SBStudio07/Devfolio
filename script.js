@@ -62,3 +62,41 @@ function toggleReadLess(postNumber) {
     document.getElementById('excerpt' + postNumber).style.display = 'block';  // Show the excerpt
     document.getElementById('readMore' + postNumber).style.display = 'inline-block';  // Show the Read More button
 }
+
+// JavaScript for automatic sliding effect
+let currentIndex = 0;
+const reviews = document.querySelectorAll('.review-item');
+const totalReviews = reviews.length;
+
+function showReview(index) {
+  if (index >= totalReviews) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = totalReviews - 1;
+  } else {
+    currentIndex = index;
+  }
+  const offset = -currentIndex * 100;
+  reviews.forEach(review => {
+    review.style.transform = `translateX(${offset}%)`;
+  });
+}
+
+// Initialize the first review
+showReview(currentIndex);
+
+// Set interval for automatic sliding every 5 seconds
+const interval = setInterval(() => {
+  showReview(currentIndex + 1);
+}, 5000);
+
+// Clear interval on user interaction
+document.querySelector('.reviews-slider').addEventListener('mouseenter', () => {
+  clearInterval(interval);
+});
+
+document.querySelector('.reviews-slider').addEventListener('mouseleave', () => {
+  setInterval(() => {
+    showReview(currentIndex + 1);
+  }, 5000);
+});

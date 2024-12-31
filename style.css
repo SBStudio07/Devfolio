@@ -9,7 +9,7 @@
 
 nav {
   width: 100%;
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,7 +17,7 @@ nav {
   color: white;
   background: linear-gradient(rgba(35, 89, 239, 0.95), rgba(35, 48, 239, 0.95));
   border-bottom: 1px dotted white;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 9999;
 }
@@ -25,7 +25,7 @@ nav {
 .nav-left {
   width: fit-content;
   height: fit-content;
-  font-size: 35px;
+  font-size: 28px;
   margin-left: 60px;
 }
 
@@ -82,7 +82,6 @@ nav {
   background: linear-gradient(rgba(35, 89, 239, 0.95), rgba(35, 48, 239, 0.95)),
     url(../img/hero-bg.jpg);
   border-bottom: 1px dotted #000000;
-  margin-top: 100px;
 }
 
 .hero-content {
@@ -438,6 +437,7 @@ nav {
   background-color: #f9f9f9;
   padding: 60px 20px;
   text-align: center;
+  border-bottom: 1px dotted #000000;
 }
 .pricing-heading {
   margin-bottom: 40px;
@@ -545,6 +545,7 @@ nav {
 .blog-section {
   background-color: #f5f5f5;
   padding: 50px 0;
+  border-bottom: 1px dotted #000000;
 }
 
 .blog-section .container {
@@ -553,7 +554,7 @@ nav {
   padding: 0 15px;
 }
 
-.blog-section .container h4{
+.blog-section .container h4 {
   font-size: 15px;
   color: #646464;
   text-align: center;
@@ -628,24 +629,24 @@ nav {
 
 /* Correct way to style the first, second, and third blog post */
 .blog-post:nth-child(1) .read-more {
-    display: inline-block;
+  display: inline-block;
 }
 .blog-post:nth-child(1) .read-less {
-    display: none;
+  display: none;
 }
 
 .blog-post:nth-child(2) .read-more {
-    display: inline-block;
+  display: inline-block;
 }
 .blog-post:nth-child(2) .read-less {
-    display: none;
+  display: none;
 }
 
 .blog-post:nth-child(3) .read-more {
-    display: inline-block;
+  display: inline-block;
 }
 .blog-post:nth-child(3) .read-less {
-    display: none;
+  display: none;
 }
 
 /* Initially hide the Read Less button */
@@ -668,13 +669,15 @@ nav {
 }
 
 /* Add styling for headings and lists in the full content */
-.blog-post .post-full h4, .blog-post .post-full h5 {
+.blog-post .post-full h4,
+.blog-post .post-full h5 {
   color: #333;
   font-weight: bold;
   margin-top: 10px;
 }
 
-.blog-post .post-full ul, .blog-post .post-full ol {
+.blog-post .post-full ul,
+.blog-post .post-full ol {
   margin-left: 20px;
 }
 
@@ -691,14 +694,125 @@ nav {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.read-more, .read-less {
+.read-more,
+.read-less {
   color: #007bff;
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
 }
 
-.read-more:hover, .read-less:hover {
+.read-more:hover,
+.read-less:hover {
   text-decoration: underline;
+}
+
+/* Review Section */
+
+.reviews {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 0;
+  gap: 30px;
+  border-bottom: 1px dotted #000000;
+}
+
+.reviews-heading {
+  text-align: center;
+}
+
+.reviews-heading p {
+  color: #646464;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.reviews-heading h1 {
+  font-size: 48px;
+  color: #000000;
+}
+
+.reviews-slider {
+  display: flex;
+  overflow: hidden;
+  width: 60%;
+  height: 400px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.review-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #007bff;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 40px rgba(0, 7, 136, 0.634), inset -2px -2px 40px rgba(0, 7, 136, 0.634);
+  transition: transform 0.5s ease;
+}
+
+.review-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.review-item .client-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.review-item .client-position {
+  font-size: 16px;
+  color: #303030;
+  margin-bottom: 15px;
+}
+
+.review-item .review-text {
+  width: 60%;
+  font-size: 18px;
+  color: #dbdbdb;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 99999;
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
 
