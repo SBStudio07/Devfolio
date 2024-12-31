@@ -11,9 +11,15 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-
     <!-- Navbar Section -->
 
     <nav>
@@ -22,8 +28,8 @@
       </div>
       <div class="nav-right">
         <ul>
-          <li>Home</li>
-          <li>About</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
           <li>Experience</li>
           <li>Portfolio</li>
           <li>Pricing</li>
@@ -36,10 +42,13 @@
 
     <!-- Hero Section -->
 
-    <div class="hero-section">
+    <div class="hero-section" id="home">
       <div class="hero-content">
         <h3>Hi, I'm</h3>
         <h1>Suman<br />Bhattacharya</h1>
+        <div class="element">
+          <span id="element"></span>
+        </div>
         <div class="hero-buttons">
           <button class="hireBtn">Hire Me</button>
           <button class="contactBtn">Contact Me</button>
@@ -49,6 +58,102 @@
         <img src="img/dev-img.webp" alt="hero-img" />
       </div>
     </div>
-    
+
+    <!-- About Section -->
+
+    <div class="about" id="about">
+      <div class="about-heading">
+        <p>Learn About Me</p>
+        <h1>5 Month Experience</h1>
+      </div>
+      <div class="about-para">
+        So, I'm still a student learning all this skills. So here is the skills
+        as per my learnings till today...
+      </div>
+      <div class="about-grid">
+        <div class="about-grid-top">
+          <!-- Web Design -->
+          <div class="about-boxes" id="webDesign">
+            <div class="about-img">
+              <i class="fa-solid fa-laptop"></i>
+            </div>
+            <div class="grid-text-cont">
+              <div class="about-grid-text">
+                <h1>Web Design</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolor, dolorum!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Web Development -->
+          <div class="about-boxes" id="webDevelopment">
+            <div class="about-img">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="grid-text-cont">
+              <div class="about-grid-text">
+                <h1>Web Development</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolor, dolorum!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-grid-bottom">
+          <!-- App Design -->
+          <div class="about-boxes" id="appDesign">
+            <div class="about-img">
+              <i class="fa-brands fa-android"></i>
+            </div>
+            <div class="grid-text-cont">
+              <div class="about-grid-text">
+                <h1>App Design</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolor, dolorum!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- App Development -->
+          <div class="about-boxes" id="appDevelopment">
+            <div class="about-img">
+              <i class="fa-brands fa-apple"></i>
+            </div>
+            <div class="grid-text-cont">
+              <div class="about-grid-text">
+                <h1>App Development</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolor, dolorum!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Jr. Web Developer",
+          "",
+          "Jr. Web Designer",
+          "",
+          "Jr. App Developer",
+          "",
+          "Jr. App Disigner",
+          "",
+          "Jr. Web Developer",
+        ],
+        typeSpeed: 50,
+      });
+    </script>
   </body>
 </html>
