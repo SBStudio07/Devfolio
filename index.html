@@ -510,7 +510,9 @@
           <p class="client-name">John Doe</p>
           <p class="client-position">CEO at Zepto</p>
           <p class="review-text">
-            "This is the best service I ever had. Suman and his Team works hard to fulfill each and every quearies of any customers. Must be taken his service!"
+            "This is the best service I ever had. Suman and his Team works hard
+            to fulfill each and every quearies of any customers. Must be taken
+            his service!"
           </p>
         </div>
 
@@ -519,7 +521,7 @@
           <p class="client-name">Rohan Chacha</p>
           <p class="client-position">Founder of Foucon Automotive</p>
           <p class="review-text">
-            "This service transformed our business operations.<br>Highly
+            "This service transformed our business operations.<br />Highly
             recommend!"
           </p>
         </div>
@@ -529,9 +531,35 @@
           <p class="client-name">Katty Luise</p>
           <p class="client-position">Co-founder Of Techno Scandels</p>
           <p class="review-text">
-            "What a wonderful service, whenever I massage Suman for help he directly contacts me and solves my issue in any development matters in just 49$/mo! Highly recommend"
+            "What a wonderful service, whenever I massage Suman for help he
+            directly contacts me and solves my issue in any development matters
+            in just 49$/mo! Highly recommend"
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section class="contact-section" id="contact">
+      <div class="contact-image">
+        <img src="img/contact.jpg" alt="Contact Image" />
+      </div>
+      <div class="contact-form">
+        <h4>Get in Touch</h4>
+        <h2>Contact Me</h2>
+        <form action="/submit" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </section>
 
