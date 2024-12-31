@@ -19,6 +19,7 @@ nav {
   border-bottom: 1px dotted white;
   position: fixed;
   top: 0;
+  z-index: 9999;
 }
 
 .nav-left {
@@ -47,6 +48,7 @@ nav {
   list-style-type: none;
   cursor: pointer;
   position: relative;
+  outline: none;
 }
 .nav-right ul li a {
   text-decoration: none;
@@ -334,7 +336,7 @@ nav {
 }
 
 /* Portfolio Section */
-      
+
 .portfolio {
   width: 100%;
   background-color: white;
@@ -425,4 +427,114 @@ nav {
 .portfolio-overlay a:hover {
   background-color: white;
   color: rgb(0, 76, 255);
+}
+
+/* Pricing Section */
+
+/* Pricing Section */
+.pricing {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.pricing-heading {
+  margin-bottom: 40px;
+}
+.pricing-heading p {
+  color: #646464;
+  font-size: 16px;
+  font-weight: 500;
+}
+.pricing-heading h1 {
+  font-size: 45px;
+  margin: 10px 0;
+}
+.pricing-heading .subtext {
+  font-size: 14px;
+  color: #888;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+.pricing-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.pricing-card .price {
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+.pricing-card .description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.pricing-card ul li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.pricing-card ul li i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.pricing-card .pricing-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.pricing-card .pricing-btn:hover {
+  background: #0056b3;
+}
+
+/* Styling for Basic Plan */
+.pricing-card:nth-child(1) {
+  border: 2px solid rgb(83, 83, 83);
+}
+.pricing-card:nth-child(2) {
+  border: 2px solid rgb(0, 106, 255);
+}
+.pricing-card:nth-child(3) {
+  border: 2px solid rgb(8, 0, 161);
+}
+/* Styling for Pro Plan */
+.pro-card {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 123, 255, 0.1),
+    rgba(0, 123, 255, 0.05)
+  );
 }
