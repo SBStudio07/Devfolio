@@ -124,7 +124,6 @@ nav {
 }
 .hero-buttons .hireBtn,
 .contactBtn {
-  border: none;
   padding: 12px 24px;
   background-color: white;
   color: rgb(0, 50, 252);
@@ -132,6 +131,7 @@ nav {
   border: 2px solid white;
   transition: all 0.3s ease;
   cursor: pointer;
+  border-radius: 8px;
 }
 .hero-buttons .hireBtn:hover,
 .contactBtn:hover {
@@ -509,17 +509,18 @@ nav {
 }
 
 .pricing-card .pricing-btn {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 12px 24px;
+  background-color: rgb(0, 50, 252);
+  color: white;
+  font-size: 15px;
+  border: 2px solid rgb(0, 50, 252);
+  transition: all 0.3s ease;
   cursor: pointer;
-  transition: background 0.3s ease;
+  border-radius: 6px;
 }
 .pricing-card .pricing-btn:hover {
-  background: #0056b3;
+  background-color: white;
+  color: rgb(0, 50, 252);
 }
 
 /* Styling for Basic Plan */
@@ -824,6 +825,7 @@ nav {
   align-items: center;
   justify-content: space-around;
   padding: 20px;
+  border-bottom: 1px dotted #000000;
 }
 
 .contact-image img {
@@ -869,13 +871,100 @@ nav {
 
 .contact-form button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: rgb(0, 50, 252);
   color: white;
-  border: none;
-  border-radius: 4px;
+  font-size: 15px;
+  border: 2px solid rgb(0, 50, 252);
+  transition: all 0.3s ease;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .contact-form button:hover {
-  background-color: #0056b3;
+  background-color: white;
+  color: rgb(0, 50, 252);
+}
+
+/* Footer Section */
+
+.footer {
+  width: 100%;
+  height: 240px;
+  background-image: linear-gradient(to top, rgb(0, 0, 129), rgb(0, 64, 255));
+}
+.footer-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 50px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.social-icons a {
+  height: fit-content;
+  width: fit-content;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: white;
+  padding: 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.467);
+  transition: all 0.3s ease;
+}
+.fa-brands {
+  transition: all 0.3s ease;
+  color: rgb(0, 21, 255);
+}
+.social-icons a:hover .fa-brands{
+  font-size: 50px;
+  color: white;
+}
+.social-icons a:hover {
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  box-shadow: none;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.footer-nav ul li {
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.footer-nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+.footer-nav ul li:hover {
+  background-image: radial-gradient(rgb(0, 0, 170), rgb(0, 0, 159));
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.467);
+}
+
+.footer-end {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(191, 191, 191);
+  background-color: #333;
 }
