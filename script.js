@@ -146,3 +146,33 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('nav-scrolled');
   }
 });
+
+
+
+// Select all fade sections
+const fadeSections = document.querySelectorAll('.fade-section');
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Find all child fade items in the intersecting section
+      const fadeItems = entry.target.querySelectorAll('.fade-item');
+      
+      // Apply staggered animation to each fade item
+      fadeItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, index * 250); // 200ms delay for each item
+      });
+
+      // Optional: Stop observing this section after animating
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.6, // Trigger when 30% of the section is visible
+});
+
+// Observe all fade sections
+fadeSections.forEach((section) => observer.observe(section));

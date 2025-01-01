@@ -22,11 +22,11 @@
   <body>
     <!-- Navbar Section -->
 
-    <nav class="navbar" id="navbar">
-      <div class="nav-left">
+    <nav class="navbar fade-section" id="navbar">
+      <div class="nav-left fade-item">
         <h1>Devfolio</h1>
       </div>
-      <div class="nav-right">
+      <div class="nav-right fade-item">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -42,26 +42,26 @@
 
     <!-- Hero Section -->
 
-    <section class="hero-section" id="home">
+    <section class="hero-section fade-section" id="home">
       <div class="hero-content">
-        <h3>Hi, I'm</h3>
-        <h1>Suman<br />Bhattacharya</h1>
-        <div class="element">
+        <h3 class="fade-item">Hi, I'm</h3>
+        <h1 class="fade-item">Suman<br>Bhattacharya</h1>
+        <div class="element fade-item">
           <span id="element"></span>
         </div>
-        <div class="hero-buttons">
+        <div class="hero-buttons fade-item">
           <button class="hireBtn">Hire Me</button>
-          <button class="contactBtn">Contact Me</button>
+          <button class="contactBtn fade-item">Contact Me</button>
         </div>
       </div>
-      <div class="hero-img">
+      <div class="hero-img fade-item">
         <img src="img/dev-img.webp" alt="hero-img" />
       </div>
     </section>
 
     <!-- About Section -->
 
-    <section class="about" id="about">
+    <section class="about fade-section" id="about">
       <div class="about-heading">
         <p id="about-href">Learn About Me</p>
         <h1>5 Month Experience</h1>
@@ -73,7 +73,7 @@
       <div class="about-grid">
         <div class="about-grid-top">
           <!-- Web Design -->
-          <div class="about-boxes" id="webDesign">
+          <div class="about-boxes fade-item" id="webDesign">
             <div class="about-img">
               <i class="fa-solid fa-laptop"></i>
             </div>
@@ -88,7 +88,7 @@
             </div>
           </div>
           <!-- Web Development -->
-          <div class="about-boxes" id="webDevelopment">
+          <div class="about-boxes fade-item" id="webDevelopment">
             <div class="about-img">
               <i class="fa-solid fa-laptop-code"></i>
             </div>
@@ -105,7 +105,7 @@
         </div>
         <div class="about-grid-bottom">
           <!-- App Design -->
-          <div class="about-boxes" id="appDesign">
+          <div class="about-boxes fade-item" id="appDesign">
             <div class="about-img">
               <i class="fa-brands fa-android"></i>
             </div>
@@ -120,7 +120,7 @@
             </div>
           </div>
           <!-- App Development -->
-          <div class="about-boxes" id="appDevelopment">
+          <div class="about-boxes fade-item" id="appDevelopment">
             <div class="about-img">
               <i class="fa-brands fa-apple"></i>
             </div>
@@ -140,40 +140,13 @@
 
     <!-- Experience Section -->
 
-    <section class="experience" id="experience">
-      <div class="experience-heading">
+    <section class="experience fade-section" id="experience">
+      <div class="experience-heading fade-item">
         <p>My Journey</p>
-        <h1>Experience</h1>
+        <h1 class="fade-item">Experience</h1>
       </div>
       <div class="experience-timeline">
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <i class="fa-solid fa-briefcase"></i>
-          </div>
-          <div class="timeline-content">
-            <h2>Web Developer Intern</h2>
-            <p class="timeline-date">June 2024 - Present</p>
-            <p>
-              Worked on developing responsive websites using HTML, CSS, and
-              JavaScript. Contributed to UI/UX improvements and collaborated
-              with a team to deploy multiple projects.
-            </p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <i class="fa-solid fa-laptop-code"></i>
-          </div>
-          <div class="timeline-content">
-            <h2>Freelance Web Designer</h2>
-            <p class="timeline-date">January 2024 - May 2024</p>
-            <p>
-              Designed modern websites for small businesses, improving user
-              experience and increasing customer engagement.
-            </p>
-          </div>
-        </div>
-        <div class="timeline-item">
+        <div class="timeline-item fade-item">
           <div class="timeline-icon">
             <i class="fa-solid fa-graduation-cap"></i>
           </div>
@@ -187,32 +160,59 @@
             </p>
           </div>
         </div>
+        <div class="timeline-item fade-item">
+          <div class="timeline-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="timeline-content">
+            <h2>Freelance Web Designer</h2>
+            <p class="timeline-date">January 2024 - May 2024</p>
+            <p>
+              Designed modern websites for small businesses, improving user
+              experience and increasing customer engagement.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item fade-item">
+          <div class="timeline-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="timeline-content">
+            <h2>Web Developer Intern</h2>
+            <p class="timeline-date">June 2024 - Present</p>
+            <p>
+              Worked on developing responsive websites using HTML, CSS, and
+              JavaScript. Contributed to UI/UX improvements and collaborated
+              with a team to deploy multiple projects.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Portfolio Section -->
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio fade-section" id="portfolio">
       <div class="portfolio-heading">
         <p>My Work</p>
         <h1>Portfolio</h1>
       </div>
       <div class="portfolio-grid">
-        <div class="portfolio-item">
+        <div class="portfolio-item  fade-item">
           <img src="img/Amazon.png" alt="Project 1" />
           <div class="portfolio-overlay">
             <h2>Amazon Clone</h2>
             <a href="https://sbstudio07.github.io/Amazon-Clone/" target="_blank"> View Project </a>
           </div>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item  fade-item">
           <img src="img/Netflix.png" alt="Project 2" />
           <div class="portfolio-overlay">
             <h2>Netflix Clone</h2>
             <a href="#" target="_blank"> View Project </a>
           </div>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item  fade-item">
           <img src="img/PYQ 2.0.png" alt="Project 3" />
           <div class="portfolio-overlay">
             <h2>PYQ 2.0</h2>
@@ -229,17 +229,17 @@
 
     <!-- Pricing Section -->
 
-    <section class="pricing" id="pricing">
+    <section class="pricing fade-section" id="pricing">
       <div class="pricing-heading">
         <p>Choose Your Plan</p>
         <h1>Pricing</h1>
-        <p class="subtext">
+        <p class="subtext fade-item">
           Select the perfect plan that suits your needs. Upgrade anytime!
         </p>
       </div>
       <div class="pricing-grid">
         <!-- Free Plan -->
-        <div class="pricing-card">
+        <div class="pricing-card fade-item">
           <h2>Free</h2>
           <p class="price">$0/month</p>
           <p class="description">
@@ -256,7 +256,7 @@
           <button class="pricing-btn">Start for Free</button>
         </div>
         <!-- Basic Plan -->
-        <div class="pricing-card">
+        <div class="pricing-card fade-item">
           <h2>Basic</h2>
           <p class="price">$19/month</p>
           <p class="description">
@@ -275,7 +275,7 @@
           <button class="pricing-btn">Select Plan</button>
         </div>
         <!-- Pro Plan -->
-        <div class="pricing-card pro-card">
+        <div class="pricing-card pro-card fade-item">
           <h2>Pro</h2>
           <p class="price">$49/month</p>
           <p class="description">
@@ -299,22 +299,22 @@
 
     <!-- Blog Section -->
 
-    <section id="blog" class="blog-section">
-      <div class="container">
+    <section id="blog" class="blog-section fade-section">
+      <div class="container fade-item">
         <h4>Learn About My Blog</h4>
-        <h2 class="section-title">My Development Blog</h2>
-        <p class="section-description">
+        <h2 class="section-title fade-item">My Development Blog</h2>
+        <p class="section-description fade-item">
           Sharing my learning journey, insights, and projects in web and app
           development. Follow along as I explore new technologies and build my
           portfolio.
         </p>
 
-        <div class="blog-posts">
+        <div class="blog-posts fade-item">
           <!-- Blog Post 1 -->
           <div class="blog-post">
             <h3 class="post-title">Getting Started with Web Development</h3>
-            <p class="post-date">January 1, 2025</p>
-            <p class="post-excerpt" id="excerpt1">
+            <p class="post-date fade-item">January 1, 2025</p>
+            <p class="post-excerpt fade-item" id="excerpt1">
               In this post, I share my journey of learning web development from
               scratch...
             </p>
@@ -356,7 +356,7 @@
             </div>
             <a
               href="javascript:void(0);"
-              class="read-more"
+              class="read-more fade-item"
               id="readMore1"
               onclick="toggleReadMore(1)"
               >Read More</a
@@ -374,8 +374,8 @@
           <!-- Blog Post 2 -->
           <div class="blog-post">
             <h3 class="post-title">Building My First Portfolio Website</h3>
-            <p class="post-date">December 30, 2024</p>
-            <p class="post-excerpt" id="excerpt2">
+            <p class="post-date fade-item">December 30, 2024</p>
+            <p class="post-excerpt fade-item" id="excerpt2">
               I discuss the process of creating my first portfolio project...
             </p>
             <div class="post-full" id="full2" style="display: none">
@@ -410,13 +410,13 @@
               </ol>
               <p>
                 This project became the foundation for my web development
-                journey, and it’s where I learned about GitHub and version
+                journey, and it's where I learned about GitHub and version
                 control...
               </p>
             </div>
             <a
               href="javascript:void(0);"
-              class="read-more"
+              class="read-more fade-item"
               id="readMore2"
               onclick="toggleReadMore(2)"
               >Read More</a
@@ -434,8 +434,8 @@
           <!-- Blog Post 3 -->
           <div class="blog-post">
             <h3 class="post-title">Exploring App Development</h3>
-            <p class="post-date">December 25, 2024</p>
-            <p class="post-excerpt" id="excerpt3">
+            <p class="post-date fade-item">December 25, 2024</p>
+            <p class="post-excerpt fade-item" id="excerpt3">
               Shifting from web development to app development...
             </p>
             <div class="post-full" id="full3" style="display: none">
@@ -479,7 +479,7 @@
             </div>
             <a
               href="javascript:void(0);"
-              class="read-more"
+              class="read-more fade-item"
               id="readMore3"
               onclick="toggleReadMore(3)"
               >Read More</a
@@ -499,17 +499,17 @@
 
     <!-- Review Section -->
 
-    <section class="reviews" id="reviews">
-      <div class="reviews-heading">
+    <section class="reviews fade-section" id="reviews">
+      <div class="reviews-heading fade-item">
         <p>What Our Clients Say</p>
-        <h1>Client Testimonials</h1>
+        <h1 class="fade-item">Client Testimonials</h1>
       </div>
-      <div class="reviews-slider">
+      <div class="reviews-slider fade-item">
         <div class="review-item">
           <img src="img/client1.jpg" alt="Client 1" />
-          <p class="client-name">John Doe</p>
-          <p class="client-position">CEO at Zepto</p>
-          <p class="review-text">
+          <p class="client-name fade-item">John Doe</p>
+          <p class="client-position fade-item">CEO at Zepto</p>
+          <p class="review-text fade-item">
             "This is the best service I ever had. Suman and his Team works hard
             to fulfill each and every quearies of any customers. Must be taken
             his service!"
@@ -541,7 +541,7 @@
 
     <!-- Contact Section -->
 
-    <section class="contact-section" id="contact">
+    <section class="contact-section fade-section" id="contact">
       <div class="contact-image">
         <img src="img/contact.jpg" alt="Contact Image" />
       </div>
@@ -549,25 +549,25 @@
         <h4>Get in Touch</h4>
         <h2>Contact Me</h2>
         <form action="/submit" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <label class="fade-item" for="name">Name:</label>
+          <input class="fade-item" type="text" id="name" name="name" required />
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <label class="fade-item" for="email">Email:</label>
+          <input class="fade-item" type="email" id="email" name="email" required />
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <label class="fade-item" for="message">Message:</label>
+          <textarea class="fade-item" id="message" name="message" rows="4" required></textarea>
 
-          <button type="submit">Submit</button>
+          <button class="fade-item" type="submit">Submit</button>
         </form>
       </div>
     </section>
 
     <!-- Footer Section -->
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-nav">
+    <footer class="footer fade-section">
+      <div class="footer-content fade-item">
+        <div class="footer-nav fade-item">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
