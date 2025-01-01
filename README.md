@@ -34,9 +34,9 @@ Starting out as a beginner is tough but rewarding! Here’s what drives me:
 
 ## 📣 Connect with Me  
 Let’s connect and grow together!  
-- 🌍 [My Devfolio](#)
+- 🌍 Portfolio Website: [My Devfolio](https://sbstudio07.github.io/Devfolio/)
 - 📧 Email: [tgyttech@gmail.com](mailto:tgyttech@gmail.com)  
-- 💼 LinkedIn: [Not Made Yet](#)
+- 💼 LinkedIn: [Suman Bhattacharya](www.linkedin.com/in/sbstudio07)
 
 ---
 
