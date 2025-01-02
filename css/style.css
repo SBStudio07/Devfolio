@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +13,25 @@
   font-style: normal;
 }
 
-nav {
+/* Initially hide all fade items */
+.fade-item {
+  opacity: 0;
+  transform: translateY(50px);
+  visibility: hidden;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When a fade-item becomes visible */
+.fade-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+
+/* -------------Navbar Section------------- */
+
+.navbar {
   width: 100%;
   height: 70px;
   display: flex;
@@ -20,23 +44,25 @@ nav {
   position: sticky;
   top: 0;
   z-index: 9999;
+  transition: all 0.3s ease-in;
 }
 
-.nav-left {
+.navbar .nav-left {
   width: fit-content;
   height: fit-content;
   font-size: 28px;
   margin-left: 60px;
+  transition: all 0.3s ease-in;
 }
 
-.nav-right {
+.navbar .nav-right {
   width: fit-content;
   height: fit-content;
   font-size: 18px;
   margin-left: 60px;
 }
 
-.nav-right ul {
+.navbar .nav-right ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,20 +70,21 @@ nav {
   margin-right: 60px;
 }
 
-.nav-right ul li {
+.navbar .nav-right ul li {
   list-style-type: none;
   cursor: pointer;
   position: relative;
   outline: none;
 }
-.nav-right ul li a {
+.navbar .nav-right ul li a {
   text-decoration: none;
   color: white;
+  transition: all 0.3s ease;
 }
-.nav-right ul li a:focus-visible {
+.navbar.nav-right ul li a:focus-visible {
   outline: none;
 }
-.nav-right ul li::after {
+.navbar .nav-right ul li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -67,11 +94,50 @@ nav {
   background-color: #ffffff;
   transition: width 0.3s ease;
 }
-.nav-right ul li:hover::after {
+.navbar .nav-right ul li:hover::after {
   width: 100%;
 }
 
-/* Hero Section */
+
+/* Scrolled Navbar Style */
+
+.nav-scrolled {
+  color: black;
+  background: white;
+  height: 50px;
+  box-shadow: 2px 0px 4px black;
+}
+.nav-scrolled .nav-left {
+  width: fit-content;
+  height: fit-content;
+  font-size: 24px;
+  margin-left: 60px;
+}
+.nav-scrolled .nav-right {
+  width: fit-content;
+  height: fit-content;
+  font-size: 16px;
+  margin-left: 60px;
+}
+.nav-scrolled .nav-right ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.nav-scrolled .nav-right ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 0.8px;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+.nav-right ul li a:focus-visible {
+  outline: none;
+}
+
+/* ---------------------Hero Section-------------------- */
 
 .hero-section {
   width: 100%;
@@ -80,7 +146,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(rgba(35, 89, 239, 0.95), rgba(35, 48, 239, 0.95)),
-    url(../img/hero-bg.jpg);
+    url(img/hero-bg.jpg);
   border-bottom: 1px dotted #000000;
 }
 
@@ -139,39 +205,44 @@ nav {
   color: white;
 }
 
-/* About Section */
+/* -------------------- About Section ----------------- */
 
 .about {
   width: 100%;
-  height: 600px;
+  min-height: 600px; /* Minimum height */
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem; /* Increased gap for spacing */
   border-bottom: 1px dotted #000000;
+  padding: 2rem 5%; /* Added padding for better spacing */
 }
+
 .about-heading {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .about-heading p {
   color: #646464;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
 }
+
 .about-heading h1 {
-  font-size: 45px;
+  font-size: 2.8rem; /* Responsive font size */
 }
+
 .about-para {
-  width: 42%;
-  height: fit-content;
+  width: 60%; /* Adjusted for better responsiveness */
   text-align: center;
   color: #646464;
   font-weight: 200;
+  font-size: 1rem;
 }
 
 .about-grid {
@@ -179,36 +250,43 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 30px;
-  margin-top: 10px;
+  gap: 3rem;
+  margin-top: 2rem;
+  width: 100%;
 }
+
 .about-grid-top,
 .about-grid-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  height: 130px;
+  gap: 2rem;
+  width: 100%;
 }
+
 .about-boxes {
-  width: 560px;
+  width: 100%;
+  max-width: 80%; /* Limiting width for better responsiveness */
   display: flex;
   align-items: start;
   justify-content: start;
   cursor: pointer;
   transition: all 0.4s ease;
+  flex-direction: row; /* Default layout is column */
 }
+
 .about-img {
-  font-size: 60px;
+  font-size: 3.75rem; /* Scalable icon size */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 130px;
-  width: 150px;
+  height: 8rem; /* Scalable height */
+  width: 9.375rem; /* Scalable width */
   border: 1.2px solid blue;
   border-radius: 10px;
   transition: all 0.2s ease;
 }
+
 .about-img i {
   transition: all 0.3s ease;
   color: rgb(0, 60, 255);
@@ -216,45 +294,51 @@ nav {
 
 .grid-text-cont {
   width: 100%;
-  height: 130px;
-  transition: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease;
+  height: 8rem; /* Consistent height */
+  padding: 1rem;
+  transition: all 0.4s ease;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 .about-boxes:hover .grid-text-cont {
   background-color: rgb(0, 76, 255);
   color: white;
 }
+
 .about-boxes:hover .about-grid-text p {
   color: rgb(211, 211, 211);
 }
+
 .about-boxes:hover .about-img {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+
 .about-boxes:hover .about-img i {
-  scale: 1.15;
+  transform: scale(1.15);
 }
+
 .about-grid-text {
   display: flex;
   justify-content: start;
   flex-direction: column;
-  padding: 10px 15px;
+  gap: 0.5rem;
+  padding: 1rem;
   text-align: justify;
-  gap: 6px;
 }
+
 .about-grid-text h1 {
-  font-size: 22px;
+  font-size: 1.4rem; /* Scalable title size */
 }
+
 .about-grid-text p {
-  font-size: 14px;
+  font-size: 1rem; /* Responsive paragraph text */
   color: #8c8c8c;
   font-weight: 100;
 }
 
-/* Experience Section */
+/* -----------------Experience Section--------------- */
 
 .experience {
   width: 100%;
@@ -270,6 +354,7 @@ nav {
 
 .experience-heading {
   text-align: center;
+  margin-top: 18px;
 }
 
 .experience-heading p {
@@ -284,15 +369,17 @@ nav {
 
 .experience-timeline {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 40px;
   width: 80%;
 }
 
+/* Flex styling for timeline items */
 .timeline-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .timeline-icon {
@@ -314,6 +401,7 @@ nav {
   padding: 20px;
   border-radius: 10px;
   flex-grow: 1;
+  width: calc(100% - 100px); /* Adjust width to fit within smaller screens */
 }
 
 .timeline-content h2 {
@@ -337,7 +425,7 @@ nav {
   background-color: rgba(35, 89, 239, 0.95);
 }
 
-/* Portfolio Section */
+/* ------------Portfolio Section------------- */
 
 .portfolio {
   width: 100%;
@@ -353,6 +441,7 @@ nav {
 
 .portfolio-heading {
   text-align: center;
+  margin-top: 18px;
 }
 
 .portfolio-heading p {
@@ -431,8 +520,9 @@ nav {
   color: rgb(0, 76, 255);
 }
 
-/* Pricing Section */
-.pricing {
+/* ----------------Pricing Section---------------- */
+
+#pricing {
   width: 100%;
   background-color: #f9f9f9;
   padding: 60px 20px;
@@ -542,7 +632,8 @@ nav {
   );
 }
 
-/* Blog Section */
+/* -----------------Blog Section------------- */
+
 .blog-section {
   background-color: #f5f5f5;
   padding: 50px 0;
@@ -559,10 +650,10 @@ nav {
   font-size: 15px;
   color: #646464;
   text-align: center;
+  margin-top: 10px;
 }
 .blog-section .section-title {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 45px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -628,7 +719,6 @@ nav {
   text-decoration: underline;
 }
 
-/* Correct way to style the first, second, and third blog post */
 .blog-post:nth-child(1) .read-more {
   display: inline-block;
 }
@@ -650,17 +740,14 @@ nav {
   display: none;
 }
 
-/* Initially hide the Read Less button */
 .blog-post .read-less {
   display: none;
 }
 
-/* Initially show the Read More button */
 .blog-post .read-more {
   display: inline-block;
 }
 
-/* Style for the full content (hidden initially) */
 .blog-post .post-full {
   margin-top: 20px;
   padding: 15px;
@@ -669,7 +756,6 @@ nav {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Add styling for headings and lists in the full content */
 .blog-post .post-full h4,
 .blog-post .post-full h5 {
   color: #333;
@@ -686,7 +772,6 @@ nav {
   margin-bottom: 8px;
 }
 
-/* Optional: Add some styling for the blog post */
 .blog-post {
   margin-bottom: 20px;
   padding: 20px;
@@ -708,7 +793,7 @@ nav {
   text-decoration: underline;
 }
 
-/* Review Section */
+/* --------------Review Section------------- */
 
 .reviews {
   width: 100%;
@@ -733,7 +818,7 @@ nav {
 }
 
 .reviews-heading h1 {
-  font-size: 48px;
+  font-size: 45px;
   color: #000000;
 }
 
@@ -818,7 +903,7 @@ nav {
   right: 10px;
 }
 
-/* Contact Section */
+/* ----------------Contact Section---------------- */
 
 .contact-section {
   display: flex;
@@ -885,36 +970,36 @@ nav {
   color: rgb(0, 50, 252);
 }
 
-/* Footer Section */
+/* --------------------Footer Section-------------------- */
 
 .footer {
   width: 100%;
-  height: 240px;
+  height: auto;
   background-image: linear-gradient(to top, rgb(0, 0, 129), rgb(0, 64, 255));
+  padding: 20px 0; /* Add padding for better spacing on smaller screens */
 }
+
 .footer-content {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column-reverse;
-  gap: 50px;
+  gap: 30px; /* Reduce gap for smaller screens */
 }
 
 .social-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px; /* Reduce gap between icons */
 }
+
 .social-icons a {
-  height: fit-content;
-  width: fit-content;
   text-decoration: none;
   font-size: 30px;
   background-color: white;
-  padding: 14px;
+  padding: 10px; /* Adjust padding for smaller screens */
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -922,14 +1007,17 @@ nav {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.467);
   transition: all 0.3s ease;
 }
+
 .fa-brands {
   transition: all 0.3s ease;
   color: rgb(0, 21, 255);
 }
-.social-icons a:hover .fa-brands{
-  font-size: 50px;
+
+.social-icons a:hover .fa-brands {
+  font-size: 40px; /* Reduce hover font size for smaller screens */
   color: white;
 }
+
 .social-icons a:hover {
   background-color: transparent;
   color: white;
@@ -939,32 +1027,35 @@ nav {
 
 .footer-nav ul {
   display: flex;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px; /* Reduce gap between navigation links */
+  padding: 0; /* Remove extra padding */
 }
+
 .footer-nav ul li {
   list-style-type: none;
-  padding: 10px;
+  padding: 8px; /* Adjust padding for smaller screens */
   border-radius: 8px;
   transition: all 0.3s linear;
   cursor: pointer;
 }
+
 .footer-nav ul li a {
   text-decoration: none;
   color: white;
 }
+
 .footer-nav ul li:hover {
-  background-image: radial-gradient(rgb(0, 0, 170), rgb(0, 0, 159));
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.467);
 }
 
 .footer-end {
   width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px 0; /* Adjust padding for better spacing */
+  text-align: center; /* Ensure centered text alignment */
   color: rgb(191, 191, 191);
   background-color: #333;
+  font-size: 14px; /* Adjust font size for readability */
 }

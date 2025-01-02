@@ -6,7 +6,7 @@ var typed = new Typed("#element", {
     "",
     "Jr. App Developer",
     "",
-    "Jr. App Disigner",
+    "Jr. App Designer",
     "",
     "Jr. Web Developer",
     "",
@@ -14,7 +14,7 @@ var typed = new Typed("#element", {
     "",
     "Jr. App Developer",
     "",
-    "Jr. App Disigner",
+    "Jr. App Designer",
     "",
     "Jr. Web Developer",
     "",
@@ -22,7 +22,7 @@ var typed = new Typed("#element", {
     "",
     "Jr. App Developer",
     "",
-    "Jr. App Disigner",
+    "Jr. App Designer",
     "",
     "Jr. Web Developer",
     "",
@@ -30,7 +30,7 @@ var typed = new Typed("#element", {
     "",
     "Jr. App Developer",
     "",
-    "Jr. App Disigner",
+    "Jr. App Designer",
     "",
     "Jr. Web Developer",
     "",
@@ -38,11 +38,11 @@ var typed = new Typed("#element", {
     "",
     "Jr. App Developer",
     "",
-    "Jr. App Disigner",
+    "Jr. App Designer",
     "",
     "Jr. Web Developer",
   ],
-  typeSpeed: 50,
+  typeSpeed: 69,
 });
 
 // Toggle Read More functionality
@@ -100,3 +100,78 @@ document.querySelector('.reviews-slider').addEventListener('mouseleave', () => {
     showReview(currentIndex + 1);
   }, 5000);
 });
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetElement = document.querySelector(this.getAttribute('href'));
+
+      if (targetElement) {
+          const duration = 1500; // Time in ms (1.5 seconds for slower scroll)
+          let startTime = null;
+
+          const smoothScroll = (timestamp) => {
+              if (!startTime) startTime = timestamp;
+              const elapsed = timestamp - startTime;
+
+              const progress = Math.min(elapsed / duration, 1); // Normalized progress
+              const easeInProgress = Math.pow(progress, 3); // Cubic ease-in formula
+
+              const start = window.scrollY;
+              const distance = targetElement.offsetTop - start;
+
+              window.scrollTo(0, start + distance * easeInProgress);
+
+              if (progress < 1) {
+                  requestAnimationFrame(smoothScroll);
+              }
+          };
+
+          requestAnimationFrame(smoothScroll);
+      }
+  });
+});
+
+
+const navbar = document.querySelector('nav');
+
+// Function to add/remove the "nav-scrolled" class based on scroll position
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    navbar.classList.add('nav-scrolled');
+  } else {
+    navbar.classList.remove('nav-scrolled');
+  }
+});
+
+
+
+// Select all fade sections
+const fadeSections = document.querySelectorAll('.fade-section');
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Find all child fade items in the intersecting section
+      const fadeItems = entry.target.querySelectorAll('.fade-item');
+      
+      // Apply staggered animation to each fade item
+      fadeItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, index * 250); // 200ms delay for each item
+      });
+
+      // Optional: Stop observing this section after animating
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.4, // Trigger when 30% of the section is visible
+});
+
+// Observe all fade sections
+fadeSections.forEach((section) => observer.observe(section));
