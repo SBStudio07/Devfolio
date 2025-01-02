@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="responsiveness.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,13 +21,14 @@
     />
   </head>
   <body>
+    
     <!-- Navbar Section -->
 
-    <nav class="navbar fade-section" id="navbar">
-      <div class="nav-left fade-item">
+    <nav class="navbar" id="navbar">
+      <div class="nav-left">
         <h1>Devfolio</h1>
       </div>
-      <div class="nav-right fade-item">
+      <div class="nav-right">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -45,7 +47,7 @@
     <section class="hero-section fade-section" id="home">
       <div class="hero-content">
         <h3 class="fade-item">Hi, I'm</h3>
-        <h1 class="fade-item">Suman<br>Bhattacharya</h1>
+        <h1 class="fade-item">Suman Bhattacharya</h1>
         <div class="element fade-item">
           <span id="element"></span>
         </div>
@@ -74,13 +76,13 @@
         <div class="about-grid-top">
           <!-- Web Design -->
           <div class="about-boxes fade-item" id="webDesign">
-            <div class="about-img">
-              <i class="fa-solid fa-laptop"></i>
+            <div class="about-img fade-item">
+              <i class="fa-solid fa-laptop fade-item"></i>
             </div>
             <div class="grid-text-cont">
-              <div class="about-grid-text">
+              <div class="about-grid-text fade-item">
                 <h1>Web Design</h1>
-                <p>
+                <p class="fade-item">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Dolor, dolorum!
                 </p>
@@ -89,13 +91,13 @@
           </div>
           <!-- Web Development -->
           <div class="about-boxes fade-item" id="webDevelopment">
-            <div class="about-img">
-              <i class="fa-solid fa-laptop-code"></i>
+            <div class="about-img fade-item">
+              <i class="fa-solid fa-laptop-code fade-item"></i>
             </div>
             <div class="grid-text-cont">
-              <div class="about-grid-text">
+              <div class="about-grid-text fade-item">
                 <h1>Web Development</h1>
-                <p>
+                <p class="fade-item">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Dolor, dolorum!
                 </p>
@@ -106,13 +108,13 @@
         <div class="about-grid-bottom">
           <!-- App Design -->
           <div class="about-boxes fade-item" id="appDesign">
-            <div class="about-img">
-              <i class="fa-brands fa-android"></i>
+            <div class="about-img fade-item">
+              <i class="fa-brands fa-android fade-item"></i>
             </div>
             <div class="grid-text-cont">
-              <div class="about-grid-text">
+              <div class="about-grid-text fade-item">
                 <h1>App Design</h1>
-                <p>
+                <p class="fade-item">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Dolor, dolorum!
                 </p>
@@ -121,13 +123,13 @@
           </div>
           <!-- App Development -->
           <div class="about-boxes fade-item" id="appDevelopment">
-            <div class="about-img">
-              <i class="fa-brands fa-apple"></i>
+            <div class="about-img fade-item">
+              <i class="fa-brands fa-apple fade-item"></i>
             </div>
-            <div class="grid-text-cont">
+            <div class="grid-text-cont fade-item">
               <div class="about-grid-text">
                 <h1>App Development</h1>
-                <p>
+                <p class="fade-item">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Dolor, dolorum!
                 </p>
@@ -198,21 +200,26 @@
         <h1>Portfolio</h1>
       </div>
       <div class="portfolio-grid">
-        <div class="portfolio-item  fade-item">
+        <div class="portfolio-item fade-item">
           <img src="img/Amazon.png" alt="Project 1" />
           <div class="portfolio-overlay">
             <h2>Amazon Clone</h2>
-            <a href="https://sbstudio07.github.io/Amazon-Clone/" target="_blank"> View Project </a>
+            <a
+              href="https://sbstudio07.github.io/Amazon-Clone/"
+              target="_blank"
+            >
+              View Project
+            </a>
           </div>
         </div>
-        <div class="portfolio-item  fade-item">
+        <div class="portfolio-item fade-item">
           <img src="img/Netflix.png" alt="Project 2" />
           <div class="portfolio-overlay">
             <h2>Netflix Clone</h2>
             <a href="#" target="_blank"> View Project </a>
           </div>
         </div>
-        <div class="portfolio-item  fade-item">
+        <div class="portfolio-item fade-item">
           <img src="img/PYQ 2.0.png" alt="Project 3" />
           <div class="portfolio-overlay">
             <h2>PYQ 2.0</h2>
@@ -229,70 +236,70 @@
 
     <!-- Pricing Section -->
 
-    <section class="pricing fade-section" id="pricing">
+    <section class="pricing" id="pricing">
       <div class="pricing-heading">
         <p>Choose Your Plan</p>
         <h1>Pricing</h1>
-        <p class="subtext fade-item">
+        <p class="subtext">
           Select the perfect plan that suits your needs. Upgrade anytime!
         </p>
       </div>
       <div class="pricing-grid">
         <!-- Free Plan -->
-        <div class="pricing-card fade-item">
-          <h2>Free</h2>
-          <p class="price">$0/month</p>
-          <p class="description">
+        <div class="pricing-card fade-section">
+          <h2 class="fade-item">Free</h2>
+          <p class="price fade-item">$0/month</p>
+          <p class="description fade-item">
             Get started with essential features at no cost.
           </p>
           <ul>
-            <li><i class="fa-solid fa-check"></i> 0 Project/mo</li>
-            <li><i class="fa-solid fa-envelope"></i> Email Support</li>
-            <li><i class="fa-solid fa-users"></i> Community Access</li>
-            <li>
+            <li class="fade-item"><i class="fa-solid fa-check"></i> 0 Project/mo</li>
+            <li class="fade-item"><i class="fa-solid fa-envelope"></i> Email Support</li>
+            <li class="fade-item"><i class="fa-solid fa-users"></i> Community Access</li>
+            <li class="fade-item">
               <i class="fa-solid fa-book-open"></i> Access to Free Resources
             </li>
           </ul>
-          <button class="pricing-btn">Start for Free</button>
+          <button class="pricing-btn fade-item">Start for Free</button>
         </div>
         <!-- Basic Plan -->
-        <div class="pricing-card fade-item">
+        <div class="pricing-card fade-section">
           <h2>Basic</h2>
-          <p class="price">$19/month</p>
-          <p class="description">
+          <p class="price fade-item">$19/month</p>
+          <p class="description fade-item">
             Perfect for beginners and individual projects.
           </p>
           <ul>
-            <li><i class="fa-solid fa-check"></i> 5 Project/mo</li>
-            <li><i class="fa-solid fa-envelope"></i> Email Support</li>
-            <li><i class="fa-solid fa-chart-line"></i> Basic Analytics</li>
-            <li><i class="fa-solid fa-users"></i> Community Access</li>
-            <li><i class="fa-solid fa-cloud"></i> 1 GB Cloud Storage</li>
-            <li>
+            <li class="fade-item"><i class="fa-solid fa-check"></i> 5 Project/mo</li>
+            <li class="fade-item"><i class="fa-solid fa-envelope"></i> Email Support</li>
+            <li class="fade-item"><i class="fa-solid fa-chart-line"></i> Basic Analytics</li>
+            <li class="fade-item"><i class="fa-solid fa-users"></i> Community Access</li>
+            <li class="fade-item"><i class="fa-solid fa-cloud"></i> 1 GB Cloud Storage</li>
+            <li class="fade-item">
               <i class="fa-solid fa-book-open"></i> Access to Free Resources
             </li>
           </ul>
-          <button class="pricing-btn">Select Plan</button>
+          <button class="pricing-btn fade-item">Select Plan</button>
         </div>
         <!-- Pro Plan -->
-        <div class="pricing-card pro-card fade-item">
+        <div class="pricing-card pro-card fade-section">
           <h2>Pro</h2>
-          <p class="price">$49/month</p>
-          <p class="description">
+          <p class="price fade-item">$49/month</p>
+          <p class="description fade-item">
             Ideal for professionals and advanced projects.
           </p>
           <ul>
-            <li><i class="fa-solid fa-check"></i> 10 Projects/mo</li>
-            <li><i class="fa-solid fa-headset"></i> Priority Support</li>
-            <li><i class="fa-solid fa-chart-line"></i> Advanced Analytics</li>
-            <li><i class="fa-solid fa-users"></i> Community Access</li>
-            <li><i class="fa-solid fa-cloud"></i> 10 GB Cloud Storage</li>
-            <li>
+            <li class="fade-item"><i class="fa-solid fa-check"></i> 10 Projects/mo</li>
+            <li class="fade-item"><i class="fa-solid fa-headset"></i> Priority Support</li>
+            <li class="fade-item"><i class="fa-solid fa-chart-line"></i> Advanced Analytics</li>
+            <li class="fade-item"><i class="fa-solid fa-users"></i> Community Access</li>
+            <li class="fade-item"><i class="fa-solid fa-cloud"></i> 10 GB Cloud Storage</li>
+            <li class="fade-item">
               <i class="fa-solid fa-diamond"></i> Access to Premium Resources
             </li>
-            <li><i class="fa-solid fa-calendar-check"></i> Monthly Webinars</li>
+            <li class="fade-item"><i class="fa-solid fa-calendar-check"></i> Monthly Webinars</li>
           </ul>
-          <button class="pricing-btn">Select Plan</button>
+          <button class="pricing-btn fade-item">Select Plan</button>
         </div>
       </div>
     </section>
@@ -518,9 +525,9 @@
 
         <div class="review-item">
           <img src="img/client2.png" alt="Client 2" />
-          <p class="client-name">Rohan Chacha</p>
-          <p class="client-position">Founder of Foucon Automotive</p>
-          <p class="review-text">
+          <p class="client-name fade-item">Rohan Chacha</p>
+          <p class="client-position fade-item">Founder of Foucon Automotive</p>
+          <p class="review-text fade-item">
             "This service transformed our business operations.<br />Highly
             recommend!"
           </p>
@@ -528,9 +535,9 @@
 
         <div class="review-item">
           <img src="img/client3.jpg" alt="Client 3" />
-          <p class="client-name">Katty Luise</p>
-          <p class="client-position">Co-founder Of Techno Scandels</p>
-          <p class="review-text">
+          <p class="client-name fade-item">Katty Luise</p>
+          <p class="client-position fade-item">Co-founder Of Techno Scandels</p>
+          <p class="review-text fade-item">
             "What a wonderful service, whenever I massage Suman for help he
             directly contacts me and solves my issue in any development matters
             in just 49$/mo! Highly recommend"
@@ -539,7 +546,7 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section
 
     <section class="contact-section fade-section" id="contact">
       <div class="contact-image">
@@ -561,11 +568,11 @@
           <button class="fade-item" type="submit">Submit</button>
         </form>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer Section -->
 
-    <footer class="footer fade-section">
+    <!-- <footer class="footer fade-section">
       <div class="footer-content fade-item">
         <div class="footer-nav fade-item">
           <ul>
@@ -597,7 +604,7 @@
     </footer>
     <div class="footer-end">
       <p>Made with <span style="color: red;">&#10084</span> SB Studio/ Devfolio</p>
-    </div>
+    </div> -->
 
     <!-- Script -->
 

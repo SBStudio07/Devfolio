@@ -135,7 +135,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Get the navbar element
 const navbar = document.querySelector('nav');
 
 // Function to add/remove the "nav-scrolled" class based on scroll position
@@ -171,7 +170,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.6, // Trigger when 30% of the section is visible
+  threshold: 0.4, // Trigger when 30% of the section is visible
 });
 
 // Observe all fade sections

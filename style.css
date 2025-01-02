@@ -140,7 +140,7 @@
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(rgba(35, 89, 239, 0.95), rgba(35, 48, 239, 0.95)),
-    url(../img/hero-bg.jpg);
+    url(img/hero-bg.jpg);
   border-bottom: 1px dotted #000000;
 }
 
@@ -199,39 +199,44 @@
   color: white;
 }
 
-/* --------------------About Section----------------- */
+/* -------------------- About Section ----------------- */
 
 .about {
   width: 100%;
-  height: 600px;
+  min-height: 600px; /* Minimum height */
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem; /* Increased gap for spacing */
   border-bottom: 1px dotted #000000;
+  padding: 2rem 5%; /* Added padding for better spacing */
 }
+
 .about-heading {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .about-heading p {
   color: #646464;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
 }
+
 .about-heading h1 {
-  font-size: 45px;
+  font-size: 2.8rem; /* Responsive font size */
 }
+
 .about-para {
-  width: 42%;
-  height: fit-content;
+  width: 60%; /* Adjusted for better responsiveness */
   text-align: center;
   color: #646464;
   font-weight: 200;
+  font-size: 1rem;
 }
 
 .about-grid {
@@ -239,36 +244,43 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 30px;
-  margin-top: 10px;
+  gap: 3rem;
+  margin-top: 2rem;
+  width: 100%;
 }
+
 .about-grid-top,
 .about-grid-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  height: 130px;
+  gap: 2rem;
+  width: 100%;
 }
+
 .about-boxes {
-  width: 560px;
+  width: 100%;
+  max-width: 80%; /* Limiting width for better responsiveness */
   display: flex;
   align-items: start;
   justify-content: start;
   cursor: pointer;
   transition: all 0.4s ease;
+  flex-direction: row; /* Default layout is column */
 }
+
 .about-img {
-  font-size: 60px;
+  font-size: 3.75rem; /* Scalable icon size */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 130px;
-  width: 150px;
+  height: 8rem; /* Scalable height */
+  width: 9.375rem; /* Scalable width */
   border: 1.2px solid blue;
   border-radius: 10px;
   transition: all 0.2s ease;
 }
+
 .about-img i {
   transition: all 0.3s ease;
   color: rgb(0, 60, 255);
@@ -276,40 +288,46 @@
 
 .grid-text-cont {
   width: 100%;
-  height: 130px;
-  transition: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease;
+  height: 8rem; /* Consistent height */
+  padding: 1rem;
+  transition: all 0.4s ease;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 .about-boxes:hover .grid-text-cont {
   background-color: rgb(0, 76, 255);
   color: white;
 }
+
 .about-boxes:hover .about-grid-text p {
   color: rgb(211, 211, 211);
 }
+
 .about-boxes:hover .about-img {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+
 .about-boxes:hover .about-img i {
-  scale: 1.15;
+  transform: scale(1.15);
 }
+
 .about-grid-text {
   display: flex;
   justify-content: start;
   flex-direction: column;
-  padding: 10px 15px;
+  gap: 0.5rem;
+  padding: 1rem;
   text-align: justify;
-  gap: 6px;
 }
+
 .about-grid-text h1 {
-  font-size: 22px;
+  font-size: 1.4rem; /* Scalable title size */
 }
+
 .about-grid-text p {
-  font-size: 14px;
+  font-size: 1rem; /* Responsive paragraph text */
   color: #8c8c8c;
   font-weight: 100;
 }
@@ -350,10 +368,12 @@
   width: 80%;
 }
 
+/* Flex styling for timeline items */
 .timeline-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .timeline-icon {
@@ -375,6 +395,7 @@
   padding: 20px;
   border-radius: 10px;
   flex-grow: 1;
+  width: calc(100% - 100px); /* Adjust width to fit within smaller screens */
 }
 
 .timeline-content h2 {
@@ -495,7 +516,7 @@
 
 /* ----------------Pricing Section---------------- */
 
-.pricing {
+#pricing {
   width: 100%;
   background-color: #f9f9f9;
   padding: 60px 20px;

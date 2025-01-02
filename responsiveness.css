@@ -1,0 +1,486 @@
+/* --------------------- Responsive Navbar Section -------------------- */
+@media (max-width: 1080px) {
+  .nav-right ul {
+    display: none; /* Hide the menu items */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: rgba(35, 48, 239, 0.95);
+    gap: 15px;
+    padding: 20px;
+    transition: all 0.5s ease-out;
+  }
+}
+
+/* --------------------- Responsive Hero Section -------------------- */
+
+/* General styles for smaller screens */
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 45px;
+    line-height: 1.2;
+  }
+
+  .element span {
+    font-size: 24px;
+  }
+
+  .hero-img {
+    margin-right: 0;
+    width: 60%;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 30px 15px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+  }
+  .hero-content h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero-content h3 {
+    font-size: 20px;
+  }
+
+  .element span {
+    font-size: 20px;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .hero-content h3 {
+    font-size: 18px;
+  }
+
+  .element span {
+    font-size: 18px;
+  }
+
+  .hero-buttons .hireBtn,
+  .contactBtn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .hero-img {
+    margin-top: 15px;
+  }
+}
+
+/* ----------------- Responsive About Section  ------------------ */
+
+/* For medium screens (tablets and below) */
+@media (max-width: 1024px) {
+  .about-heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-para {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .about-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-boxes {
+    width: 90%;
+    max-width: 22rem;
+  }
+  .about-grid-top,
+  .about-grid-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-boxes {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .about-img {
+    font-size: 3rem;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .about-grid-text h1 {
+    font-size: 1.25rem;
+  }
+
+  .about-grid-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For small screens (phones) */
+@media (max-width: 768px) {
+  .about-heading h1 {
+    font-size: 2rem;
+  }
+
+  .about-para {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .about-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-grid-top,
+  .about-grid-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-boxes {
+    width: 100%;
+    max-width: 120%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-img {
+    font-size: 2.5rem;
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .grid-text-cont {
+    height: 7rem;
+  }
+
+  .about-grid-text {
+    padding: 0;
+  }
+
+  .about-grid-text h1 {
+    font-size: 1.1rem;
+  }
+
+  .about-grid-text p {
+    font-size: 0.8rem;
+  }
+}
+
+/* For extra small screens (very small phones) */
+@media (max-width: 480px) {
+  .about-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-para {
+    width: 95%;
+    font-size: 0.8rem;
+  }
+
+  .about-grid-top,
+  .about-grid-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-boxes {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-img {
+    font-size: 2rem;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .grid-text-cont {
+    height: 6rem;
+  }
+
+  .about-grid-text h1 {
+    font-size: 1rem;
+  }
+
+  .about-grid-text p {
+    font-size: 0.7rem;
+  }
+}
+
+/*Adding more smaller screens css*/
+@media (max-width: 380px) {
+  .about-boxes {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-img {
+    font-size: 2rem;
+    width: 100%;
+    height: 6rem;
+    border-radius: 8px;
+  }
+
+  .about-boxes:hover .about-img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .grid-text-cont {
+    height: fit-content;
+    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+  }
+
+  .about-grid-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .about-grid-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ----------------- Responsive Experience Section  ------------------ */
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .experience-heading h1 {
+    font-size: 35px; /* Smaller heading */
+  }
+
+  .experience-timeline {
+    width: 90%; /* Increase width to better utilize smaller screens */
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start; /* Stack icons and text vertically */
+    gap: 15px;
+  }
+
+  .timeline-icon {
+    font-size: 40px; /* Smaller icon size */
+    width: 60px;
+    height: 60px;
+  }
+
+  .timeline-content {
+    width: 100%; /* Full width for content */
+    padding: 15px;
+  }
+
+  .timeline-content h2 {
+    font-size: 18px; /* Reduce the heading font size */
+  }
+
+  .timeline-content p {
+    font-size: 14px; /* Smaller paragraph text */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-heading h1 {
+    font-size: 28px; /* Even smaller heading */
+  }
+
+  .timeline-item {
+    gap: 10px;
+  }
+
+  .timeline-icon {
+    font-size: 30px; /* Even smaller icon size */
+    width: 50px;
+    height: 50px;
+  }
+
+  .timeline-content h2 {
+    font-size: 16px; /* Even smaller heading */
+  }
+
+  .timeline-content p {
+    font-size: 12px; /* Reduce paragraph font size */
+  }
+}
+
+/* ----------------- Responsive Portfolio Section  ------------------ */
+
+/* Responsive Styles for Smaller Screens */
+
+@media (max-width: 768px) {
+  .portfolio-heading h1 {
+    font-size: 35px; /* Smaller heading */
+  }
+
+  .portfolio-heading p {
+    font-size: 14px; /* Smaller subheading */
+  }
+
+  .portfolio-grid {
+    width: 90%;
+    gap: 20px; /* Reduced gap */
+  }
+
+  .portfolio-item {
+    margin: 0; /* Remove margins */
+  }
+
+  .portfolio-overlay h2 {
+    font-size: 20px; /* Smaller project name */
+  }
+
+  .portfolio-overlay a {
+    font-size: 14px; /* Smaller button text */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-heading h1 {
+    font-size: 28px; /* Even smaller heading */
+  }
+
+  .portfolio-heading p {
+    font-size: 12px; /* Even smaller subheading */
+  }
+
+  .portfolio-grid {
+    width: 90%;
+    gap: 40px; /* Further reduce gap */
+  }
+
+  .portfolio-item {
+    width: 100%; /* Full width items */
+  }
+
+  .portfolio-overlay h2 {
+    font-size: 18px; /* Smaller project name */
+  }
+
+  .portfolio-overlay a {
+    font-size: 12px; /* Smaller button text */
+    padding: 6px 12px; /* Smaller button size */
+  }
+}
+
+/* ----------------- Responsive Pricing Section  ------------------ */
+
+/* NOT NEEDED */
+
+/* ----------------- Responsive Blog Section  ------------------ */
+
+@media screen and (max-width: 1200px) {
+  .blog-posts {
+    justify-content: center;
+    gap: 20px; /* Add spacing between posts */
+  }
+  .blog-post {
+    width: 45%; /* Adjust width for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+  .blog-posts {
+    flex-direction: column;
+    align-items: center; /* Center posts in smaller screens */
+  }
+
+  .blog-post {
+    width: 100%; /* Full width for small screens */
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .blog-section .section-title {
+    font-size: 36px; /* Reduce section title size */
+  }
+  .blog-section .section-description {
+    font-size: 14px; /* Reduce description font size */
+  }
+  .blog-post .post-title {
+    font-size: 20px; /* Adjust blog post title size */
+  }
+  .blog-post .post-excerpt,
+  .blog-post .post-full {
+    font-size: 14px; /* Adjust text size */
+  }
+  .blog-post {
+    padding: 15px; /* Reduce padding */
+  }
+}
+
+/* Responsive Styles for Smaller Screens */
+
+@media (max-width: 768px) {
+  .reviews-slider {
+    width: 90%; /* Full width slider on mobile */
+    height: min-content;
+  }
+
+  .review-item .review-text {
+    width: 80%; /* Ensure text is more compact */
+  }
+
+  .reviews-heading h1 {
+    font-size: 35px; /* Adjust header size */
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-slider {
+    width: 90%; /* Full width slider on mobile */
+    height: min-content;
+  }
+
+  .review-item .review-text {
+    width: 90%; /* Ensure text is compact */
+  }
+
+  .reviews-heading h1 {
+    font-size: 28px; /* Smaller header on mobile */
+  }
+
+  .prev,
+  .next {
+    font-size: 16px; /* Smaller arrows on mobile */
+  }
+}
