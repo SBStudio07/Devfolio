@@ -1,16 +1,19 @@
 /* --------------------- Responsive Navbar Section -------------------- */
 @media (max-width: 1080px) {
-  .nav-right ul {
+  .navbar {
+    justify-content: center;
+  }
+  
+  .nav-right {
     display: none; /* Hide the menu items */
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background-color: rgba(35, 48, 239, 0.95);
-    gap: 15px;
-    padding: 20px;
-    transition: all 0.5s ease-out;
+  }
+
+  .navbar .nav-left {
+    width: fit-content;
+    height: fit-content;
+    font-size: 28px;
+    margin-left: 0px;
+    transition: all 0.3s ease-in;
   }
 }
 
@@ -416,7 +419,7 @@
 
 @media screen and (max-width: 768px) {
   .section-title {
-    font-size: 28px;
+    font-size: 36px;
   }
   .blog-posts {
     flex-direction: column;
@@ -429,9 +432,9 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .blog-section .section-title {
-    font-size: 36px; /* Reduce section title size */
+    font-size: 28px; /* Reduce section title size */
   }
   .blog-section .section-description {
     font-size: 14px; /* Reduce description font size */
@@ -482,5 +485,114 @@
   .prev,
   .next {
     font-size: 16px; /* Smaller arrows on mobile */
+  }
+}
+
+
+/* ----------------Responsive Contact Section---------------- */
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 80%; /* Make the form take more space on smaller screens */
+    padding-left: 0; /* Remove padding on smaller screens */
+  }
+
+  .contact-image {
+    max-width: 70%;
+    display: inline;
+    align-items: center;
+  }
+  .contact-image img {
+    max-width: 100%; /* Make the image responsive */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  .contact-form h2 {
+    font-size: 30px; /* Smaller font size on mobile */
+  }
+
+  .contact-form button {
+    width: 100%; /* Make the button take full width on mobile */
+    font-size: 18px; /* Adjust font size for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-image {
+    max-width: 90%;
+    display: inline;
+    align-items: center;
+  }
+  .contact-image img {
+    max-width: 100%; /* Make the image responsive */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  .contact-form h2 {
+    font-size: 25px; /* Further reduce font size on very small screens */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+}
+
+/* -------------------- Responsive Footer Section -------------------- */
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column-reverse; /* Stack elements vertically */
+    gap: 20px; /* Adjust gap for smaller screens */
+  }
+
+  .social-icons a {
+    font-size: 24px; /* Reduce icon size */
+    padding: 8px; /* Adjust padding */
+  }
+
+  .footer-nav ul {
+    gap: 8px; /* Reduce gap between links */
+  }
+
+  .footer-nav ul li {
+    padding: 6px; /* Adjust padding for smaller screens */
+  }
+
+  .footer-end {
+    font-size: 12px; /* Smaller font size for compact display */
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons a {
+    font-size: 19px; /* Further reduce icon size */
+    padding: 6px;
+  }
+
+  .footer-nav ul li {
+    font-size: 14px; /* Adjust font size for links */
+  }
+
+  .footer-end {
+    font-size: 10px; /* Further adjust font size for very small screens */
+  }
+
+  .social-icons a:hover .fa-brands {
+    font-size: 32px; /* Reduce hover font size for smaller screens */
+    color: white;
+  }
+  
+  .social-icons a:hover {
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    box-shadow: none;
   }
 }

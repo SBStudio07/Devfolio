@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -968,32 +974,32 @@
 
 .footer {
   width: 100%;
-  height: 240px;
+  height: auto;
   background-image: linear-gradient(to top, rgb(0, 0, 129), rgb(0, 64, 255));
+  padding: 20px 0; /* Add padding for better spacing on smaller screens */
 }
+
 .footer-content {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column-reverse;
-  gap: 50px;
+  gap: 30px; /* Reduce gap for smaller screens */
 }
 
 .social-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px; /* Reduce gap between icons */
 }
+
 .social-icons a {
-  height: fit-content;
-  width: fit-content;
   text-decoration: none;
   font-size: 30px;
   background-color: white;
-  padding: 14px;
+  padding: 10px; /* Adjust padding for smaller screens */
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -1001,14 +1007,17 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.467);
   transition: all 0.3s ease;
 }
+
 .fa-brands {
   transition: all 0.3s ease;
   color: rgb(0, 21, 255);
 }
-.social-icons a:hover .fa-brands{
-  font-size: 50px;
+
+.social-icons a:hover .fa-brands {
+  font-size: 40px; /* Reduce hover font size for smaller screens */
   color: white;
 }
+
 .social-icons a:hover {
   background-color: transparent;
   color: white;
@@ -1018,32 +1027,35 @@
 
 .footer-nav ul {
   display: flex;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px; /* Reduce gap between navigation links */
+  padding: 0; /* Remove extra padding */
 }
+
 .footer-nav ul li {
   list-style-type: none;
-  padding: 10px;
+  padding: 8px; /* Adjust padding for smaller screens */
   border-radius: 8px;
   transition: all 0.3s linear;
   cursor: pointer;
 }
+
 .footer-nav ul li a {
   text-decoration: none;
   color: white;
 }
+
 .footer-nav ul li:hover {
-  background-image: radial-gradient(rgb(0, 0, 170), rgb(0, 0, 159));
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.467);
 }
 
 .footer-end {
   width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px 0; /* Adjust padding for better spacing */
+  text-align: center; /* Ensure centered text alignment */
   color: rgb(191, 191, 191);
   background-color: #333;
+  font-size: 14px; /* Adjust font size for readability */
 }
