@@ -1,8 +1,5 @@
 /* --------------------- Responsive Navbar Section -------------------- */
 @media (max-width: 1080px) {
-  .navbar {
-    justify-content: center;
-  }
   
   .nav-right {
     display: none; /* Hide the menu items */
@@ -12,8 +9,13 @@
     width: fit-content;
     height: fit-content;
     font-size: 28px;
-    margin-left: 0px;
+    margin-left: 20px;
     transition: all 0.3s ease-in;
+  }
+
+  .hamburger {
+    display: inline-block;
+    margin-right: 20px;
   }
 }
 
@@ -92,8 +94,7 @@
 
   .hero-buttons .hireBtn,
   .contactBtn {
-    font-size: 14px;
-    padding: 10px 20px;
+    font-size: 15px;
   }
 
   .hero-img {
@@ -398,6 +399,13 @@
   .portfolio-overlay a {
     font-size: 12px; /* Smaller button text */
     padding: 6px 12px; /* Smaller button size */
+  }
+}
+
+@media (max-width: 340px) {
+  .portfolio-grid {
+    width: 90%;
+    gap: 30px;
   }
 }
 

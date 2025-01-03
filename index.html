@@ -6,6 +6,7 @@
     <title>Devfolio</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/responsiveness.css"/>
+    <link rel="stylesheet" href="css/popups.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,6 +41,24 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+      <div class="hamburger" id="hamburger" onclick="openSlider(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+      </div>
+  
+      <div class="slidebar" id="slideBar">
+        <a onclick="onclickMenu()" href="#home">Home</a>
+        <a onclick="onclickMenu()" href="#about">About</a>
+        <a onclick="onclickMenu()" href="#experience">Experience</a>
+        <a onclick="onclickMenu()" href="#portfolio">Portfolio</a>
+        <a onclick="onclickMenu()" href="#pricing">Pricing</a>
+        <a onclick="onclickMenu()" href="#blog">Blog</a>
+        <a onclick="onclickMenu()" href="#reviews">Review</a>
+        <a onclick="onclickMenu()" href="#contact">Contact</a>
+      </div>
     </nav>
 
     <!-- Hero Section -->
@@ -52,7 +71,7 @@
           <span id="element"></span>
         </div>
         <div class="hero-buttons fade-item">
-          <button class="hireBtn">Hire Me</button>
+          <button class="hireBtn"><a href="#pricing">Hire Me</a></button>
           <button class="contactBtn fade-item">Contact Me</button>
         </div>
       </div>
