@@ -10,7 +10,6 @@
     height: fit-content;
     font-size: 28px;
     margin-left: 20px;
-    transition: all 0.3s ease-in;
   }
 
   .hamburger {
@@ -86,6 +85,7 @@
 
   .hero-content h3 {
     font-size: 18px;
+    margin-top: 18px;
   }
 
   .element span {
@@ -102,163 +102,176 @@
   }
 }
 
-/* ----------------- Responsive About Section  ------------------ */
+@media (max-width: 380px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+}
+
+/* ----------------- Responsive expertise Section  ------------------ */
+
+@media (max-width: 1300px) {
+  .expertise-boxes {
+    height: 150px;
+  }
+}
 
 /* For medium screens (tablets and below) */
-@media (max-width: 1024px) {
-  .about-heading h1 {
+@media (max-width: 1065px) {
+  .expertise-heading h1 {
     font-size: 2.5rem;
   }
 
-  .about-para {
+  .expertise-para {
     width: 80%;
     font-size: 1rem;
   }
 
-  .about-grid {
+  .expertise-grid {
     flex-direction: column;
     gap: 2rem;
   }
 
-  .about-boxes {
+  .expertise-boxes {
     width: 90%;
     max-width: 22rem;
+    height: fit-content;
   }
-  .about-grid-top,
-  .about-grid-bottom {
+  .expertise-grid-top,
+  .expertise-grid-bottom {
     display: flex;
     flex-direction: column;
   }
-  .about-boxes {
+  .expertise-boxes {
     width: 100%;
     max-width: 100%;
+    height: fit-content;
     flex-direction: row;
     align-items: center;
   }
-  .about-img {
+  .expertise-img {
     font-size: 3rem;
     width: 8rem;
-    height: 8rem;
   }
 
-  .about-grid-text h1 {
+  .expertise-grid-text h1 {
     font-size: 1.25rem;
   }
 
-  .about-grid-text p {
+  .expertise-grid-text p {
     font-size: 0.9rem;
   }
 }
 
 /* For small screens (phones) */
 @media (max-width: 768px) {
-  .about-heading h1 {
+  .expertise-heading h1 {
     font-size: 2rem;
   }
 
-  .about-para {
+  .expertise-para {
     width: 90%;
     font-size: 0.9rem;
   }
 
-  .about-grid {
+  .expertise-grid {
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  .about-grid-top,
-  .about-grid-bottom {
+  .expertise-grid-top,
+  .expertise-grid-bottom {
     display: flex;
     flex-direction: column;
   }
-  .about-boxes {
+  .expertise-boxes {
     width: 100%;
     max-width: 120%;
     flex-direction: row;
     align-items: center;
   }
 
-  .about-img {
+  .expertise-img {
     font-size: 2.5rem;
     width: 7rem;
-    height: 7rem;
   }
 
-  .grid-text-cont {
-    height: 7rem;
-  }
-
-  .about-grid-text {
+  .expertise-grid-text {
     padding: 0;
   }
 
-  .about-grid-text h1 {
+  .expertise-grid-text h1 {
     font-size: 1.1rem;
   }
 
-  .about-grid-text p {
+  .expertise-grid-text p {
     font-size: 0.8rem;
   }
 }
 
 /* For extra small screens (very small phones) */
 @media (max-width: 480px) {
-  .about-heading h1 {
+
+
+  .expertise-heading p {
+    margin-top: 18px;
+  }
+  
+  .expertise-heading h1 {
     font-size: 1.8rem;
   }
 
-  .about-para {
+  .expertise-para {
     width: 95%;
     font-size: 0.8rem;
   }
 
-  .about-grid-top,
-  .about-grid-bottom {
+  .expertise-grid-top,
+  .expertise-grid-bottom {
     display: flex;
     flex-direction: column;
   }
 
-  .about-boxes {
+  .expertise-boxes {
     width: 100%;
     flex-direction: row;
     align-items: center;
   }
 
-  .about-img {
+  .expertise-img {
     font-size: 2rem;
     width: 6rem;
-    height: 6rem;
   }
 
   .grid-text-cont {
-    height: 6rem;
+    padding: 0px 12px;
   }
 
-  .about-grid-text h1 {
+  .expertise-grid-text h1 {
     font-size: 1rem;
   }
 
-  .about-grid-text p {
+  .expertise-grid-text p {
     font-size: 0.7rem;
   }
 }
 
 /*Adding more smaller screens css*/
 @media (max-width: 380px) {
-  .about-boxes {
+  .expertise-boxes {
     width: 100%;
     flex-direction: column;
     align-items: center;
   }
 
-  .about-img {
+  .expertise-img {
     font-size: 2rem;
     width: 100%;
     height: 6rem;
     border-radius: 8px;
   }
 
-  .about-boxes:hover .about-img {
+  .expertise-boxes:hover .expertise-img {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 0px;
@@ -270,13 +283,14 @@
     border-bottom-left-radius: 8px;
     border-bottom-left-radius: 8px;
     border-top-right-radius: 0px;
+    padding: 12px;
   }
 
-  .about-grid-text h1 {
+  .expertise-grid-text h1 {
     font-size: 1.2rem;
   }
 
-  .about-grid-text p {
+  .expertise-grid-text p {
     font-size: 0.9rem;
   }
 }
@@ -411,7 +425,11 @@
 
 /* ----------------- Responsive Pricing Section  ------------------ */
 
-/* NOT NEEDED */
+@media (max-width: 480px) {
+  .pricing-heading h1 {
+    font-size: 28px;
+  }
+}
 
 /* ----------------- Responsive Blog Section  ------------------ */
 
@@ -525,10 +543,6 @@
     font-size: 30px; /* Smaller font size on mobile */
   }
 
-  .contact-form button {
-    width: 100%; /* Make the button take full width on mobile */
-    font-size: 18px; /* Adjust font size for better readability */
-  }
 }
 
 @media (max-width: 480px) {
@@ -543,12 +557,17 @@
   }
 
   .contact-form h2 {
-    font-size: 25px; /* Further reduce font size on very small screens */
+    font-size: 28px; /* Further reduce font size on very small screens */
   }
 
   .contact-form input,
   .contact-form textarea {
     padding: 8px; /* Reduce padding for smaller screens */
+  }
+
+  .contact-form button {
+    width: 100%; /* Make the button take full width on mobile */
+    font-size: 16px; /* Adjust font size for better readability */
   }
 }
 
